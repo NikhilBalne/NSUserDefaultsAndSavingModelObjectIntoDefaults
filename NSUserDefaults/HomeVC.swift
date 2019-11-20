@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
         guard let savedPersonData = UserDefaults.standard.object(forKey: "loginResponse") as? Data else { return }
         guard let savedPerson = try? JSONDecoder().decode(LoginResponseModel.self, from: savedPersonData) else { return }
         
-        print("\n Saved Doctor Name : \(String(describing: savedPerson.doctorName))")
+        print("Saved Doctor Name:\(String(describing: savedPerson.doctorName))")
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
